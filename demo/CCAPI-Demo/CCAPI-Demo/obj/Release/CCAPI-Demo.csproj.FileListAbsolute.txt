@@ -1,0 +1,11 @@
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\bin\Release\CCAPI-Demo.exe.config
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\bin\Release\CCAPI-Demo.exe
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\bin\Release\CCAPI-Demo.pdb
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\bin\Release\PS3Lib.dll
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\bin\Release\PS3Lib.pdb
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\bin\Release\PS3Lib.xml
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\obj\Release\CCAPI_Demo.Form1.resources
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\obj\Release\CCAPI_Demo.Properties.Resources.resources
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\obj\Release\CCAPI-Demo.csproj.GenerateResource.Cache
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\obj\Release\CCAPI-Demo.exe
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\obj\Release\CCAPI-Demo.pdb

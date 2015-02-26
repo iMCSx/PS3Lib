@@ -1,0 +1,11 @@
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Release\PS3API-Demo.exe.config
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Release\PS3API-Demo.exe
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Release\PS3API-Demo.pdb
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Release\PS3Lib.dll
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Release\PS3Lib.pdb
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Release\PS3Lib.xml
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Release\PS3API_Demo.Main.resources
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Release\PS3API_Demo.Properties.Resources.resources
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Release\PS3API-Demo.csproj.GenerateResource.Cache
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Release\PS3API-Demo.exe
+D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Release\PS3API-Demo.pdb
