@@ -1,24 +1,19 @@
 ﻿// ************************************************* //
-//    --- Copyright (c) 2014 iMCS Productions ---    //
+//    --- Copyright (c) 2015 iMCS Productions ---    //
 // ************************************************* //
 //              PS3Lib v4 By FM|T iMCSx              //
 //                                                   //
-// Features v4.4 :                                   //
-// - Support CCAPI v2.6 C# by iMCSx                  //
-// - Set Boot Console ID                             //
-// - Popup better form with icon                     //
-// - CCAPI Consoles List Popup French/English        //
-// - CCAPI Get Console Info                          //
-// - CCAPI Get Console List                          //
-// - CCAPI Get Number Of Consoles                    //
-// - Get Console Name TMAPI/CCAPI                    //
+// Features v4.5 :                                   //
+// - Support CCAPI v2.60+ C# by iMCSx.               //
+// - Read/Write memory as 'double'.                  //
+// - Constructor overload for ArrayBuilder.          //
+// - Some functions fixes.                           //
 //                                                   //
-// Credits : FM|T Enstone , Buc-ShoTz                //
+// Credits : Enstone, Buc-ShoTz                      //
 //                                                   //
 // Follow me :                                       //
 //                                                   //
 // FrenchModdingTeam.com                             //
-// Youtube.com/iMCSx                                 //
 // Twitter.com/iMCSx                                 //
 // Facebook.com/iMCSx                                //
 //                                                   //
@@ -275,27 +270,15 @@ namespace PS3Lib
             string Stringz = replace.Insert(replace.Length - 1, "0");
 
             int Odd = replace.Length;
-            bool Nombre;
-            if (Odd % 2 == 0)
-                Nombre = true;
-            else
-                Nombre = false;
+            bool Nombre = false;
+            if (Odd % 2 == 0) Nombre = true;
+
             try
             {
-                if (Nombre == true)
-                {
-                    return Enumerable.Range(0, replace.Length)
+                return Enumerable.Range(0, replace.Length)
                  .Where(x => x % 2 == 0)
-                 .Select(x => Convert.ToByte(replace.Substring(x, 2), 16))
+                 .Select(x => Convert.ToByte(Nombre ? replace.Substring(x, 2) : Stringz.Substring(x, 2), 16))
                  .ToArray();
-                }
-                else
-                {
-                    return Enumerable.Range(0, replace.Length)
-                 .Where(x => x % 2 == 0)
-                 .Select(x => Convert.ToByte(Stringz.Substring(x, 2), 16))
-                 .ToArray();
-                }
             }
             catch { throw new System.ArgumentException("Value not possible.", "Byte Array"); }
         }

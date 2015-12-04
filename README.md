@@ -3,9 +3,15 @@
 This will allow you to communicate with your PS3 DEX/CEX
 Connection with targets , read/write memory and more...
 
+# Last changes:
+- Support CCAPI v2.60+.
+- Read/Write memory as 'double'.
+- ArrayBuilder constructor overload.
+- Some functions fixes. 
+
 # Functions list :
 
-- Support CCAPI v2.60 C#.
+- Support CCAPI v2.60+ C#.
 - Set boot console Ids
 - No need to give CCAPI.dll
 - Function ReadString is now very fast.
@@ -20,7 +26,7 @@ Connection with targets , read/write memory and more...
 
 # Information
 
-- Don't forget to INSTALL the latest version of CCAPI (v2.60) in your PS3 if you want develop applications with CCAPI C#
+- Don't forget to INSTALL the latest version of CCAPI (v2.60 (or higher)) in your PS3 if you want develop applications with CCAPI C#
 	- http://www.frenchmoddingteam.com/shop/application/20-control-console-api-2-60-rte-cex-dex
 
 More informations about all PS3Lib functions here :

@@ -1,24 +1,19 @@
 ﻿// ************************************************* //
-//    --- Copyright (c) 2014 iMCS Productions ---    //
+//    --- Copyright (c) 2015 iMCS Productions ---    //
 // ************************************************* //
 //              PS3Lib v4 By FM|T iMCSx              //
 //                                                   //
-// Features v4.4 :                                   //
-// - Support CCAPI v2.6 C# by iMCSx                  //
-// - Set Boot Console ID                             //
-// - Popup better form with icon                     //
-// - CCAPI Consoles List Popup French/English        //
-// - CCAPI Get Console Info                          //
-// - CCAPI Get Console List                          //
-// - CCAPI Get Number Of Consoles                    //
-// - Get Console Name TMAPI/CCAPI                    //
+// Features v4.5 :                                   //
+// - Support CCAPI v2.60+ C# by iMCSx.               //
+// - Read/Write memory as 'double'.                  //
+// - Constructor overload for ArrayBuilder.          //
+// - Some functions fixes.                           //
 //                                                   //
-// Credits : FM|T Enstone , Buc-ShoTz                //
+// Credits : Enstone, Buc-ShoTz                      //
 //                                                   //
 // Follow me :                                       //
 //                                                   //
 // FrenchModdingTeam.com                             //
-// Youtube.com/iMCSx                                 //
 // Twitter.com/iMCSx                                 //
 // Facebook.com/iMCSx                                //
 //                                                   //
@@ -131,25 +126,42 @@ namespace PS3Lib
             return BitConverter.ToSingle(buffer, 0);
         }
 
-        /// <summary>Read a string very fast and stop only when a byte null is detected (0x00).</summary>
+        /// <summary>Read and return an array of Floats.</summary>
+        public float[] ReadFloats(uint offset, int arrayLength = 3)
+        {
+            float[] vec = new float[arrayLength];
+            for (int i = 0; i < arrayLength; i++)
+            {
+                byte[] buffer = GetBytes(offset + ((uint)i*4), 4, CurrentAPI);
+                Array.Reverse(buffer, 0, 4);
+                vec[i] = BitConverter.ToSingle(buffer, 0);
+            }
+            return vec;
+        }
+
+        /// <summary>Read and return a Double.</summary>
+        public double ReadDouble(uint offset)
+        {
+            byte[] buffer = GetBytes(offset, 8, CurrentAPI);
+            Array.Reverse(buffer, 0, 8);
+            return BitConverter.ToDouble(buffer, 0);
+        }
+
+        /// <summary>Read a string very fast by buffer and stop only when a byte null is detected (0x00).</summary>
         public string ReadString(uint offset)
         {
-            int block = 40;
-            int addOffset = 0;
-            string str = "";
-            repeat:
-            byte[] buffer = ReadBytes(offset + (uint)addOffset, block);
-            str += Encoding.UTF8.GetString(buffer);
-            addOffset += block;
-            if (str.Contains('\0'))
+            int blocksize = 40;
+            int scalesize = 0;
+            string str = string.Empty;
+
+            while (!str.Contains('\0'))
             {
-                int index = str.IndexOf('\0');
-                string final = str.Substring(0, index);
-                str = String.Empty;
-                return final;
+                byte[] buffer = ReadBytes(offset + (uint)scalesize, blocksize);
+                str += Encoding.UTF8.GetString(buffer);
+                scalesize += blocksize;
             }
-            else
-                goto repeat;
+
+            return str.Substring(0, str.IndexOf('\0'));
         }
 
         /// <summary>Write a signed byte.</summary>
@@ -251,6 +263,27 @@ namespace PS3Lib
             byte[] buff = new byte[4];
             BitConverter.GetBytes(input).CopyTo(buff, 0);
             Array.Reverse(buff, 0, 4);
+            SetMem(offset, buff, CurrentAPI);
+        }
+
+        /// <summary>Write an array of Floats.</summary>
+        public void WriteFloats(uint offset, float[] input)
+        {
+            byte[] buff = new byte[4];
+            for (int i = 0; i < input.Length; i++)
+            {
+                BitConverter.GetBytes(input[i]).CopyTo(buff, 0);
+                Array.Reverse(buff, 0, 4);
+                SetMem(offset+((uint)i*4), buff, CurrentAPI);
+            }
+        }
+
+        /// <summary>Write a double.</summary>
+        public void WriteDouble(uint offset, double input)
+        {
+            byte[] buff = new byte[8];
+            BitConverter.GetBytes(input).CopyTo(buff, 0);
+            Array.Reverse(buff, 0, 8);
             SetMem(offset, buff, CurrentAPI);
         }
 

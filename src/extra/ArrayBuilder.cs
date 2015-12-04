@@ -1,24 +1,19 @@
 ﻿// ************************************************* //
-//    --- Copyright (c) 2014 iMCS Productions ---    //
+//    --- Copyright (c) 2015 iMCS Productions ---    //
 // ************************************************* //
 //              PS3Lib v4 By FM|T iMCSx              //
 //                                                   //
-// Features v4.4 :                                   //
-// - Support CCAPI v2.6 C# by iMCSx                  //
-// - Set Boot Console ID                             //
-// - Popup better form with icon                     //
-// - CCAPI Consoles List Popup French/English        //
-// - CCAPI Get Console Info                          //
-// - CCAPI Get Console List                          //
-// - CCAPI Get Number Of Consoles                    //
-// - Get Console Name TMAPI/CCAPI                    //
+// Features v4.5 :                                   //
+// - Support CCAPI v2.60+ C# by iMCSx.               //
+// - Read/Write memory as 'double'.                  //
+// - Constructor overload for ArrayBuilder.          //
+// - Some functions fixes.                           //
 //                                                   //
-// Credits : FM|T Enstone , Buc-ShoTz                //
+// Credits : Enstone, Buc-ShoTz                      //
 //                                                   //
 // Follow me :                                       //
 //                                                   //
 // FrenchModdingTeam.com                             //
-// Youtube.com/iMCSx                                 //
 // Twitter.com/iMCSx                                 //
 // Facebook.com/iMCSx                                //
 //                                                   //
@@ -49,6 +44,17 @@ namespace PS3Lib
             size = buffer.Length;
         }
 
+        public ArrayBuilder(int arraySize)
+        {
+            buffer = new byte[arraySize];
+            size = buffer.Length;
+        }
+
+        public byte[] ToArray()
+        {
+            return buffer;
+        }
+
         /// <summary>Enter into all functions "Reader".</summary>
         public ArrayReader Read
         {
@@ -72,7 +78,7 @@ namespace PS3Lib
                 size = buffer.Length;
             }
 
-            sbyte GetSByte(int pos)
+            public sbyte GetSByte(int pos)
             {
                 return (sbyte)buffer[pos];
             }
@@ -166,13 +172,17 @@ namespace PS3Lib
             {
                 int strlen = 0;
                 while (true)
+                {
+                    if ((pos + strlen) == buffer.Length)
+                        break;
                     if (buffer[pos + strlen] != (byte)0)
                         strlen++;
                     else break;
-                byte[] b = new byte[strlen];
-                for (int i = 0; i < strlen; i++)
-                    b[i] = buffer[pos+i];
-                return Encoding.UTF8.GetString(b);
+                }
+                return Encoding.UTF8.GetString(
+                    buffer.ToList()
+                    .GetRange(pos, strlen)
+                    .ToArray());
             }
 
             public float GetFloat(int pos)
@@ -198,18 +208,18 @@ namespace PS3Lib
 
             public void SetSByte(int pos, sbyte value)
             {
-                buffer[0 + pos] = (byte)value;
+                buffer[pos] = (byte)value;
             }
 
             public void SetByte(int pos, byte value)
             {
-                buffer[0 + pos] = value;
+                buffer[pos] = value;
             }
 
             public void SetChar(int pos, char value)
             {
                 byte[] b = Encoding.UTF8.GetBytes(value.ToString());
-                buffer[0 + pos] = b[0];
+                buffer[pos] = b[0];
             }
 
             public void SetBool(int pos, bool value)

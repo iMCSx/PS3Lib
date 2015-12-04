@@ -1,24 +1,19 @@
 ﻿// ************************************************* //
-//    --- Copyright (c) 2014 iMCS Productions ---    //
+//    --- Copyright (c) 2015 iMCS Productions ---    //
 // ************************************************* //
 //              PS3Lib v4 By FM|T iMCSx              //
 //                                                   //
-// Features v4.4 :                                   //
-// - Support CCAPI v2.6 C# by iMCSx                  //
-// - Set Boot Console ID                             //
-// - Popup better form with icon                     //
-// - CCAPI Consoles List Popup French/English        //
-// - CCAPI Get Console Info                          //
-// - CCAPI Get Console List                          //
-// - CCAPI Get Number Of Consoles                    //
-// - Get Console Name TMAPI/CCAPI                    //
+// Features v4.5 :                                   //
+// - Support CCAPI v2.60+ C# by iMCSx.               //
+// - Read/Write memory as 'double'.                  //
+// - Constructor overload for ArrayBuilder.          //
+// - Some functions fixes.                           //
 //                                                   //
-// Credits : FM|T Enstone , Buc-ShoTz                //
+// Credits : Enstone, Buc-ShoTz                      //
 //                                                   //
 // Follow me :                                       //
 //                                                   //
 // FrenchModdingTeam.com                             //
-// Youtube.com/iMCSx                                 //
 // Twitter.com/iMCSx                                 //
 // Facebook.com/iMCSx                                //
 //                                                   //
