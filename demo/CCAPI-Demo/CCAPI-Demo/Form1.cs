@@ -139,6 +139,8 @@ namespace CCAPI_Demo
                     PS3.RingBuzzer(CCAPI.BuzzerMode.Single);
                 else if (comboBuzzer.SelectedIndex == 2)
                     PS3.RingBuzzer(CCAPI.BuzzerMode.Double);
+                else if (comboBuzzer.SelectedIndex == 3)
+                    PS3.RingBuzzer(CCAPI.BuzzerMode.Triple);
             }
             else MessageBox.Show("Please select a buzzer mode", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

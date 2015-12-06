@@ -6,6 +6,7 @@
 // Features v4.5 :                                   //
 // - Support CCAPI v2.60+ C# by iMCSx.               //
 // - Read/Write memory as 'double'.                  //
+// - Read/Write memory as 'float' array.             //
 // - Constructor overload for ArrayBuilder.          //
 // - Some functions fixes.                           //
 //                                                   //

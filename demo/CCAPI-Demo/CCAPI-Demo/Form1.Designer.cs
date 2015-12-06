@@ -425,7 +425,8 @@
             this.comboBuzzer.Items.AddRange(new object[] {
             "Continuous",
             "Single",
-            "Double"});
+            "Double",
+            "Triple"});
             this.comboBuzzer.Location = new System.Drawing.Point(16, 20);
             this.comboBuzzer.Name = "comboBuzzer";
             this.comboBuzzer.Size = new System.Drawing.Size(160, 21);
@@ -551,7 +552,7 @@
             this.MinimumSize = new System.Drawing.Size(564, 537);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Demo for use CCAPI with PS3Lib v4.4 - By iMCSx";
+            this.Text = "Demo for use CCAPI with PS3Lib v4.5 - By iMCSx";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupConnect.ResumeLayout(false);

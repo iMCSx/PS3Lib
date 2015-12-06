@@ -27,5 +27,4 @@ D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\obj\D
 D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\obj\Debug\CCAPI_Demo.Properties.Resources.resources
 D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\obj\Debug\CCAPI-Demo.csproj.GenerateResource.Cache
 D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\bin\Debug\PS3Lib.dll
-D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\bin\Debug\PS3Lib.pdb
-D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\bin\Debug\PS3Lib.xml
+d:\Users\iMCSx\Documents\Visual Studio 2012\Projects\CCAPI-Demo\CCAPI-Demo\obj\Debug\CCAPI-Demo.csprojResolveAssemblyReference.cache

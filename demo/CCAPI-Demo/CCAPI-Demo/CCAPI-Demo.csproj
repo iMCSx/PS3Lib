@@ -32,8 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PS3Lib">
-      <HintPath>..\..\PS3Lib - v4.4\PS3Lib - v4\bin\Release\PS3Lib.dll</HintPath>
+    <Reference Include="PS3Lib, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Dev\DLL\PS3Lib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -96,13 +96,13 @@ namespace PS3API_Demo
 
         private void btnCrArr_Click(object sender, EventArgs e)
         {
-            byte[] buffer = new byte[0x50];
-            ArrayBuilder Build = new ArrayBuilder(buffer);
+            // With the v4.5 feature, you can directly put the size of the array that you want, instead of to allocate a buffer yourself, the ctor do it for you.
+            ArrayBuilder Build = new ArrayBuilder(0x50);
             Build.Write.SetBool(3, true);
             Build.Write.SetFloat(4, 1000);
             Build.Write.SetInt32(8, 1337);
             Build.Write.SetString(20, "iMCSx ArrayBuilder !");
-            PS3.SetMemory(0x10060000, buffer);
+            PS3.SetMemory(0x10060000, Build.ToArray());
             MessageBox.Show("Done, try to read now !");
         }
 
@@ -115,6 +115,9 @@ namespace PS3API_Demo
             int var3 = Build.Read.GetInt32(8);
             string var4 = Build.Read.GetString(20);
             MessageBox.Show("Result from the array sent to memory is :\n\nPosition 3 - Bool - " + var1.ToString() + "\n\nPosition 4 - Float - " + var2.ToString() + "\n\nPosition 8 - Int32 - " + var3.ToString() + "\n\nPosition 20 - String - " + var4);
+
+            string ok = PS3.Extension.ReadString(0x10060000 + 20);
+            MessageBox.Show(ok);
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)

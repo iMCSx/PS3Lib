@@ -20,3 +20,10 @@ E:\Users\ALIENWARE\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo
 D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Debug\PS3API-Demo.exe.config
 D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Debug\PS3API-Demo.exe
 D:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Debug\PS3API-Demo.pdb
+d:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Debug\PS3API_Demo.Main.resources
+d:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Debug\PS3API_Demo.Properties.Resources.resources
+d:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Debug\PS3API-Demo.csproj.GenerateResource.Cache
+d:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Debug\PS3API-Demo.exe
+d:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Debug\PS3API-Demo.pdb
+d:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\bin\Debug\PS3Lib.dll
+d:\Users\iMCSx\Documents\Visual Studio 2012\Projects\PS3API-Demo\PS3API-Demo\obj\Debug\PS3API-Demo.csprojResolveAssemblyReference.cache

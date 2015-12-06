@@ -211,7 +211,7 @@
             this.MinimumSize = new System.Drawing.Size(463, 306);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Demo for use PS3API with PS3Lib v4.4 - By iMCSx";
+            this.Text = "Demo for use PS3API with PS3Lib v4.5 - By iMCSx";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupConnect.ResumeLayout(false);

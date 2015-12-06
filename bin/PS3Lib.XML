@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PS3Lib</name>
+    </assembly>
+    <members>
+        <member name="T:PS3Lib.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:PS3Lib.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:PS3Lib.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+        <member name="P:PS3Lib.Properties.Resources.fenetre">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+            </summary>
+        </member>
+        <member name="P:PS3Lib.Properties.Resources.ps3">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+            </summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SUCCESS(System.Int32)">
+            <summary>Return true if a ccapi function return a good integer.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.ConnectTarget">
+            <summary>Connect your console by console list.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.ConnectTarget(System.String)">
+            <summary>Connect your console by ip address.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetConnectionStatus">
+            <summary>Get the status of the console.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.DisconnectTarget">
+            <summary>Disconnect your console.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.AttachProcess">
+            <summary>Attach the default process (Current Game).</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.AttachProcess(PS3Lib.CCAPI.ProcessType)">
+            <summary>Attach your desired process.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.AttachProcess(System.UInt32)">
+            <summary>Attach your desired process.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetProcessList(System.UInt32[]@)">
+            <summary>Get a list of all processes available.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetProcessName(System.UInt32,System.String@)">
+            <summary>Get the process name of your choice.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetAttachedProcess">
+            <summary>Return the current process attached. Use this function only if you called AttachProcess before.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetMemory(System.UInt32,System.Byte[])">
+            <summary>Set memory to offset (uint).</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetMemory(System.UInt64,System.Byte[])">
+            <summary>Set memory to offset (ulong).</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetMemory(System.UInt64,System.String,PS3Lib.EndianType)">
+            <summary>Set memory to offset (string hex).</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetMemory(System.UInt32,System.Byte[])">
+            <summary>Get memory from offset (uint).</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetMemory(System.UInt64,System.Byte[])">
+            <summary>Get memory from offset (ulong).</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetBytes(System.UInt32,System.UInt32)">
+            <summary>Like Get memory but this function return directly the buffer from the offset (uint).</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetBytes(System.UInt64,System.UInt32)">
+            <summary>Like Get memory but this function return directly the buffer from the offset (ulong).</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.Notify(PS3Lib.CCAPI.NotifyIcon,System.String)">
+            <summary>Display the notify message on your PS3.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.Notify(System.Int32,System.String)">
+            <summary>Display the notify message on your PS3.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.ShutDown(PS3Lib.CCAPI.RebootFlags)">
+            <summary>You can shutdown the console or just reboot her according the flag selected.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.RingBuzzer(PS3Lib.CCAPI.BuzzerMode)">
+            <summary>Your console will emit a song.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetConsoleLed(PS3Lib.CCAPI.LedColor,PS3Lib.CCAPI.LedMode)">
+            <summary>Change leds for your console.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetTargetInfo(PS3Lib.CCAPI.TargetInfo@)">
+            <summary>Get informations of your console and store them into TargetInfo class.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetFirmwareVersion">
+            <summary>Return the current firmware of your console in string format.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetTemperatureCELL">
+            <summary>Return the current temperature of your system in string.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetTemperatureRSX">
+            <summary>Return the current temperature of your system in string.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetFirmwareType">
+            <summary>Return the type of your firmware in string format.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.ClearTargetInfo">
+            <summary>Clear informations into the DLL (PS3Lib).</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetConsoleID(System.String)">
+            <summary>Set a new ConsoleID in real time. (string)</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetConsoleID(System.Byte[])">
+            <summary>Set a new ConsoleID in real time. (bytes)</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetPSID(System.String)">
+            <summary>Set a new PSID in real time. (string)</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetPSID(System.Byte[])">
+            <summary>Set a new PSID in real time. (bytes)</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetBootConsoleID(System.String,PS3Lib.CCAPI.IdType)">
+            <summary>Set a console ID when the console is running. (string)</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.SetBootConsoleID(System.Byte[],PS3Lib.CCAPI.IdType)">
+            <summary>Set a console ID when the console is running. (bytes)</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.ResetBootConsoleID(PS3Lib.CCAPI.IdType)">
+            <summary>Reset a console ID when the console is running.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetDllVersion">
+            <summary>Return CCAPI Version.</summary>
+        </member>
+        <member name="M:PS3Lib.CCAPI.GetConsoleList">
+            <summary>Return a list of informations for each console available.</summary>
+        </member>
+        <member name="T:PS3Lib.CCAPI.TargetInfo">
+            <summary>Get informations from your target.</summary>
+        </member>
+        <member name="T:PS3Lib.CCAPI.ConsoleInfo">
+            <summary>Get Info for targets.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.SetFormLang(PS3Lib.Lang)">
+            <summary>Force a language for the console list popup.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.InitTarget">
+            <summary>init again the connection if you use a Thread or a Timer.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.ConnectTarget(System.Int32)">
+            <summary>Connect your console with selected API.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.ConnectTarget(System.String)">
+            <summary>Connect your console with CCAPI.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.DisconnectTarget">
+            <summary>Disconnect Target with selected API.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.AttachProcess">
+            <summary>Attach the current process (current Game) with selected API.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.SetMemory(System.UInt32,System.Byte[])">
+            <summary>Set memory to offset with selected API.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.GetMemory(System.UInt32,System.Byte[])">
+            <summary>Get memory from offset using the Selected API.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.GetBytes(System.UInt32,System.Int32)">
+            <summary>Get memory from offset with a length using the Selected API.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.ChangeAPI(PS3Lib.SelectAPI)">
+            <summary>Change current API.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.GetCurrentAPI">
+            <summary>Return selected API.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.GetCurrentAPIName">
+            <summary>Return selected API into string format.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.PS3TMAPI_NET">
+            <summary>This will find the dll ps3tmapi_net.dll for TMAPI.</summary>
+        </member>
+        <member name="P:PS3Lib.PS3API.Extension">
+            <summary>Use the extension class with your selected API.</summary>
+        </member>
+        <member name="P:PS3Lib.PS3API.TMAPI">
+            <summary>Access to all TMAPI functions.</summary>
+        </member>
+        <member name="P:PS3Lib.PS3API.CCAPI">
+            <summary>Access to all CCAPI functions.</summary>
+        </member>
+        <member name="M:PS3Lib.PS3API.ConsoleList.getSysLanguage">
+            <summary>Return the systeme language, if it's others all text will be in english.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.ConnectTarget(System.Int32)">
+            <summary>Connect the default target and initialize the dll. Possible to put an int as arugment for determine which target to connect.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.ConnectTarget(System.String)">
+            <summary>Connect the target by is name.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.DisconnectTarget">
+            <summary>Disconnect the target.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.PowerOn(System.Int32)">
+            <summary>Power on selected target.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.PowerOff(System.Boolean)">
+            <summary>Power off selected target.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.AttachProcess">
+            <summary>Attach and continue the current process from the target.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.SetMemory(System.UInt32,System.Byte[])">
+            <summary>Set memory to the target (byte[]).</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.SetMemory(System.UInt32,System.UInt64)">
+            <summary>Set memory to the address (byte[]).</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.SetMemory(System.UInt32,System.String,PS3Lib.EndianType)">
+            <summary>Set memory with value as string hexadecimal to the address (string).</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.GetMemory(System.UInt32,System.Byte[])">
+            <summary>Get memory from the address.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.GetBytes(System.UInt32,System.UInt32)">
+            <summary>Get a bytes array with the length input.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.GetString(System.UInt32,System.UInt32)">
+            <summary>Get a string with the length input.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.ResetToXMB(PS3Lib.TMAPI.ResetTarget)">
+            <summary>Reset target to XMB , Sometimes the target restart quickly.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.PS3TMAPI_NET">
+            <summary>Load the PS3 API for use with your Application .NET.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.SCECMD.SNRESULT">
+            <summary>Get the target status and return the string value.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.SCECMD.GetTargetName">
+            <summary>Get the target name.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.SCECMD.GetStatus">
+            <summary>Get the target status and return the string value.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.SCECMD.ProcessID">
+            <summary>Get the ProcessID by the current process.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.SCECMD.ProcessIDs">
+            <summary>Get an array of processID's.</summary>
+        </member>
+        <member name="M:PS3Lib.TMAPI.SCECMD.DetailStatus">
+            <summary>Get some details from your target.</summary>
+        </member>
+        <member name="T:PS3Lib.TMAPI.ResetTarget">
+            <summary>Enum of flag reset.</summary>
+        </member>
+        <member name="P:PS3Lib.ArrayBuilder.Read">
+            <summary>Enter into all functions "Reader".</summary>
+        </member>
+        <member name="P:PS3Lib.ArrayBuilder.Write">
+            <summary>Enter into all functions "Writer".</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadSByte(System.UInt32)">
+            <summary>Read a signed byte.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadBool(System.UInt32)">
+            <summary>Read a byte a check if his value. This return a bool according the byte detected.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadInt16(System.UInt32)">
+            <summary>Read and return an integer 16 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadInt32(System.UInt32)">
+            <summary>Read and return an integer 32 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadInt64(System.UInt32)">
+            <summary>Read and return an integer 64 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadByte(System.UInt32)">
+            <summary>Read and return a byte.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadBytes(System.UInt32,System.Int32)">
+            <summary>Read a string with a length to the first byte equal to an value null (0x00).</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadUInt16(System.UInt32)">
+            <summary>Read and return an unsigned integer 16 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadUInt32(System.UInt32)">
+            <summary>Read and return an unsigned integer 32 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadUInt64(System.UInt32)">
+            <summary>Read and return an unsigned integer 64 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadFloat(System.UInt32)">
+            <summary>Read and return a Float.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadFloats(System.UInt32,System.Int32)">
+            <summary>Read and return an array of Floats.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadDouble(System.UInt32)">
+            <summary>Read and return a Double.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.ReadString(System.UInt32)">
+            <summary>Read a string very fast by buffer and stop only when a byte null is detected (0x00).</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteSByte(System.UInt32,System.SByte)">
+            <summary>Write a signed byte.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteBool(System.UInt32,System.Boolean)">
+            <summary>Write a boolean.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteInt16(System.UInt32,System.Int16)">
+            <summary>Write an interger 16 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteInt32(System.UInt32,System.Int32)">
+            <summary>Write an integer 32 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteInt64(System.UInt32,System.Int64)">
+            <summary>Write an integer 64 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteByte(System.UInt32,System.Byte)">
+            <summary>Write a byte.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteBytes(System.UInt32,System.Byte[])">
+            <summary>Write a byte array.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteString(System.UInt32,System.String)">
+            <summary>Write a string.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteUInt16(System.UInt32,System.UInt16)">
+            <summary>Write an unsigned integer 16 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteUInt32(System.UInt32,System.UInt32)">
+            <summary>Write an unsigned integer 32 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteUInt64(System.UInt32,System.UInt64)">
+            <summary>Write an unsigned integer 64 bits.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteFloat(System.UInt32,System.Single)">
+            <summary>Write a Float.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteFloats(System.UInt32,System.Single[])">
+            <summary>Write an array of Floats.</summary>
+        </member>
+        <member name="M:PS3Lib.Extension.WriteDouble(System.UInt32,System.Double)">
+            <summary>Write a double.</summary>
+        </member>
+    </members>
+</doc>
