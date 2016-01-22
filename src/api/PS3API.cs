@@ -37,7 +37,8 @@ namespace PS3Lib
     {
         Null,
         French,
-        English
+        English,
+        German
     }
 
     public enum SelectAPI
@@ -267,14 +268,17 @@ namespace PS3Lib
                 {
                     if (CultureInfo.CurrentCulture.ThreeLetterWindowsLanguageName.StartsWith("FRA"))
                         return Lang.French;
-                    else return Lang.English;
+                    else if (CultureInfo.CurrentCulture.ThreeLetterWindowsLanguageName.StartsWith("GER"))
+                        return Lang.German;
+                    return Lang.English;
                 }
                 else return SetLang.defaultLang;
             }
 
             private string strTraduction(string keyword)
             {
-                if (getSysLanguage() == Lang.French)
+                Lang lang = getSysLanguage();
+                if (lang == Lang.French)
                 {
                     switch (keyword)
                     {
@@ -289,6 +293,21 @@ namespace PS3Lib
                         case "noConsoleTitle": return "Aucune console disponible.";
                     }
                 }
+                else if(lang == Lang.German)
++                {
++                    switch (keyword)
++                    {
++                        case "btnConnect": return "Verbinde";
++                        case "btnRefresh": return "Wiederholen";
++                        case "errorSelect": return "Du musst zuerst eine Konsole auswählen.";
++                        case "errorSelectTitle": return "Wähle eine Konsole.";
++                        case "selectGrid": return "Wähle eine Konsole innerhalb dieses Gitters.";
++                        case "selectedLbl": return "Ausgewählt :";
++                        case "formTitle": return "Wähle eine Konsole...";
++                        case "noConsole": return "Keine Konsolen verfügbar - starte CCAPI Manager (v2.5) und füge eine neue Konsole hinzu.";
++                        case "noConsoleTitle": return "Keine Konsolen verfügbar.";
++                    }
++                }
                 else
                 {
                     switch (keyword)
