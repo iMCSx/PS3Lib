@@ -27,7 +27,7 @@ Connection with targets , read/write memory and more...
 
 # MD5 Hash
 
-- v4.5: 69B1ADC05A94AF8F1412DD68AAD20BB6
+- v4.5.1: 0B35CC2DF877C881469094FE47D2E825
 
 # Information
 

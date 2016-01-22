@@ -289,25 +289,25 @@ namespace PS3Lib
                         case "selectGrid": return "Sélectionnez une console dans la grille.";
                         case "selectedLbl": return "Sélection :";
                         case "formTitle": return "Choisissez une console...";
-                        case "noConsole": return "Aucune console disponible, démarrez CCAPI Manager (v2.5) et ajoutez une nouvelle console.";
+                        case "noConsole": return "Aucune console disponible, démarrez CCAPI Manager (v2.60+) et ajoutez une nouvelle console.";
                         case "noConsoleTitle": return "Aucune console disponible.";
                     }
                 }
                 else if(lang == Lang.German)
-+                {
-+                    switch (keyword)
-+                    {
-+                        case "btnConnect": return "Verbinde";
-+                        case "btnRefresh": return "Wiederholen";
-+                        case "errorSelect": return "Du musst zuerst eine Konsole auswählen.";
-+                        case "errorSelectTitle": return "Wähle eine Konsole.";
-+                        case "selectGrid": return "Wähle eine Konsole innerhalb dieses Gitters.";
-+                        case "selectedLbl": return "Ausgewählt :";
-+                        case "formTitle": return "Wähle eine Konsole...";
-+                        case "noConsole": return "Keine Konsolen verfügbar - starte CCAPI Manager (v2.5) und füge eine neue Konsole hinzu.";
-+                        case "noConsoleTitle": return "Keine Konsolen verfügbar.";
-+                    }
-+                }
+                {
+                    switch (keyword)
+                    {
+                        case "btnConnect": return "Verbinde";
+                        case "btnRefresh": return "Wiederholen";
+                        case "errorSelect": return "Du musst zuerst eine Konsole auswählen.";
+                        case "errorSelectTitle": return "Wähle eine Konsole.";
+                        case "selectGrid": return "Wähle eine Konsole innerhalb dieses Gitters.";
+                        case "selectedLbl": return "Ausgewählt :";
+                        case "formTitle": return "Wähle eine Konsole...";
+                        case "noConsole": return "Keine Konsolen verfügbar - starte CCAPI Manager (v2.60+) und füge eine neue Konsole hinzu.";
+                        case "noConsoleTitle": return "Keine Konsolen verfügbar.";
+                    }
+                }
                 else
                 {
                     switch (keyword)
@@ -319,7 +319,7 @@ namespace PS3Lib
                         case "selectGrid": return "Select a console within this grid.";
                         case "selectedLbl": return "Selected :";
                         case "formTitle": return "Select a console...";
-                        case "noConsole": return "None consoles available, run CCAPI Manager (v2.5) and add a new console.";
+                        case "noConsole": return "None consoles available, run CCAPI Manager (v2.60+) and add a new console.";
                         case "noConsoleTitle": return "None console available.";
                     }
                 }
